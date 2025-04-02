@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SFIDIN - Sarauniya Fanna Initiative for Development in Nigeria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-header d-none d-md-flex">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <img src="logo.png" alt="SFIDIN Logo" class="img-fluid header-logo">
+                    </div>
+                    <div class="col-md-6 text-center contact-info">
+                        <span><i class="fas fa-envelope"></i> info@sfidin.org</span>
+                        <span class="divider">|</span>
+                        <span><i class="fas fa-phone"></i> +234 123 456 7890</span>
+                        <span class="divider">|</span>
+                        <div class="social-icons d-inline-block">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <img src="logo.png" alt="SFIDIN Logo" class="img-fluid header-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-lg-none" href="index.html">
+                    <img src="logo.png" alt="SFIDIN Logo" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news-feeds">News & Feeds</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#donate">Donate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin.html">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Welcome to Sarauniya Fanna Initiative</h1>
+                    <p class="lead">Empowering communities, supporting orphans, and creating positive change across Nigeria.</p>
+                    <a href="#donate" class="btn btn-primary btn-lg">Donate Now</a>
+                    <a href="about.html" class="btn btn-outline-light btn-lg ms-2">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder's Section -->
+    <section class="founder-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="founder-image-container">
+                        <div id="founder-images" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="sarauniyaa.jpg" class="d-block w-100" alt="Founder Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="sarauniya2.jpg" class="d-block w-100" alt="Founder Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="saruniya3.jpg" class="d-block w-100" alt="Founder Image 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h2>Our Founder</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="founder-content">
+                        <p>Sarauniya Fanna, a visionary leader with a passion for community development and social welfare, established the Sarauniya Fanna Initiative for Development in Nigeria (SFIDIN) with a mission to transform lives and communities across Nigeria.</p>
+                        <div class="collapse" id="founderDetails">
+                            <p>With over 15 years of experience in community service and development work, Sarauniya Fanna has dedicated her life to uplifting the underprivileged, supporting orphans, and creating sustainable development initiatives that empower individuals and communities.</p>
+                            <p>Her journey began in her hometown, where she witnessed firsthand the challenges faced by vulnerable populations. This experience ignited her passion for social change and led to the establishment of SFIDIN, which has since grown into a respected organization making significant impact across Nigeria.</p>
+                            <p>Under her leadership, SFIDIN has implemented numerous successful programs in education, healthcare, skills acquisition, and economic empowerment, touching thousands of lives and creating lasting positive change.</p>
+                        </div>
+                        <button class="btn btn-link p-0 read-more-btn" type="button" data-bs-toggle="collapse" data-bs-target="#founderDetails" aria-expanded="false" aria-controls="founderDetails">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="section-title">
+                        <h2>Our Mission & Vision</h2>
+                        <div class="title-underline mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="mission-vision-image">
+                        <img src="mission-vision.jpg" alt="Mission and Vision" class="img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="mission-vision-content fade-in">
+                        <div class="mission-box mb-4">
+                            <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                            <p>To empower underprivileged individuals and communities through sustainable development initiatives, quality education, healthcare support, and economic empowerment programs that foster self-reliance and dignity.</p>
+                        </div>
+                        <div class="vision-box">
+                            <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                            <p>A Nigeria where every individual, regardless of background or circumstance, has access to opportunities for growth, development, and a dignified life, contributing to a more equitable and prosperous society.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Feeds Section -->
+    <section id="news-feeds" class="news-feeds-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="section-title">
+                        <h2>News & Updates</h2>
+                        <div class="title-underline mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="news-card">
+                        <img src="news-1.jpg" alt="News 1" class="img-fluid">
+                        <div class="news-content">
+                            <div class="news-date">April 1, 2025</div>
+                            <h3>Educational Support Program Launched</h3>
+                            <p>SFIDIN launches a new educational support program for orphans and underprivileged children in rural communities.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="news-card">
+                        <img src="news-2.jpg" alt="News 2" class="img-fluid">
+                        <div class="news-content">
+                            <div class="news-date">March 25, 2025</div>
+                            <h3>Healthcare Outreach in Northern Nigeria</h3>
+                            <p>Our healthcare team provided free medical services to over 500 individuals in remote villages across Northern Nigeria.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="news-card">
+                        <img src="news-3.jpg" alt="News 3" class="img-fluid">
+                        <div class="news-content">
+                            <div class="news-date">March 15, 2025</div>
+                            <h3>Skills Acquisition Workshop</h3>
+                            <p>SFIDIN organized a two-week skills acquisition workshop for young adults, equipping them with valuable vocational skills.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <a href="#" class="btn btn-outline-primary">View All News</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donation-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="section-title">
+                        <h2>Support Our Cause</h2>
+                        <div class="title-underline mx-auto"></div>
+                    </div>
+                    <p class="lead">Your donation can make a significant difference in the lives of those we serve.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="donation-form-container">
+                        <form id="donationForm" class="donation-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="country" class="form-label">Country</label>
+                                    <select class="form-select" id="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="Nigeria">Nigeria</option>
+                                        <option value="Ghana">Ghana</option>
+                                        <option value="Kenya">Kenya</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="United States">United States</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Donation Amount</label>
+                                <div class="donation-amount-options">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="donationAmount" id="amount1" value="5000">
+                                        <label class="form-check-label" for="amount1">₦5,000</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="donationAmount" id="amount2" value="10000">
+                                        <label class="form-check-label" for="amount2">₦10,000</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="donationAmount" id="amount3" value="20000">
+                                        <label class="form-check-label" for="amount3">₦20,000</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="donationAmount" id="amount4" value="50000">
+                                        <label class="form-check-label" for="amount4">₦50,000</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="donationAmount" id="amountCustom" value="custom">
+                                        <label class="form-check-label" for="amountCustom">Custom</label>
+                                    </div>
+                                </div>
+                                <div class="custom-amount-container mt-2 d-none">
+                                    <input type="number" class="form-control" id="customAmount" placeholder="Enter amount in Naira">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" id="donateBtn" class="btn btn-primary btn-lg">Donate Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get In Touch Section -->
+    <section class="get-in-touch-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="section-title">
+                        <h2>Get In Touch</h2>
+                        <div class="title-underline mx-auto"></div>
+                    </div>
+                    <p class="lead">We'd love to hear from you. Reach out to us with any questions or inquiries.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>123 Development Road<br>Abuja, Nigeria</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Number</h3>
+                        <p>+234 123 456 7890<br>+234 987 654 3210</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Address</h3>
+                        <p>info@sfidin.org<br>support@sfidin.org</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="logo.png" alt="SFIDIN Logo" class="footer-logo mb-3">
+                    <p>Sarauniya Fanna Initiative for Development in Nigeria (SFIDIN)</p>
+                    <p>123 Development Road, Abuja, Nigeria</p>
+                    <p>Email: info@sfidin.org</p>
+                    <p>Phone: +234 123 456 7890</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="#news-feeds">News & Updates</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Support Our Mission</h4>
+                    <p>Your generous contribution can help us make a difference in the lives of those in need. Every donation, no matter how small, brings us one step closer to creating a better future for all.</p>
+                    <a href="#donate" class="btn btn-primary mt-2">Donate Now</a>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Sarauniya Fanna Initiative for Development in Nigeria. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

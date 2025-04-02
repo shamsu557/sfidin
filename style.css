@@ -1,0 +1,514 @@
+/* 
+   SFIDIN - Sarauniya Fanna Initiative for Development in Nigeria
+   Main Stylesheet
+   
+   Color Scheme:
+   - Primary: #2E7D32 (Green - represents growth, development, wealth)
+   - Secondary: #1565C0 (Blue - represents trust, support, sympathy)
+   - Accent: #FF8F00 (Amber - represents warmth, upbringing, nurturing)
+   - Light: #F5F5F5 (Off-white - for backgrounds)
+   - Dark: #212121 (Near black - for text)
+*/
+
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --primary: #2E7D32;
+    --primary-light: #60ad5e;
+    --primary-dark: #005005;
+    --secondary: #1565C0;
+    --secondary-light: #5e92f3;
+    --secondary-dark: #003c8f;
+    --accent: #FF8F00;
+    --accent-light: #ffc046;
+    --accent-dark: #c56000;
+    --light: #F5F5F5;
+    --dark: #212121;
+    --gray: #757575;
+    --light-gray: #EEEEEE;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--light);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-dark);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-light {
+    color: var(--light);
+    border-color: var(--light);
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.title-underline {
+    height: 4px;
+    width: 60px;
+    background-color: var(--accent);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.title-underline.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== HEADER STYLES ===== */
+.top-header {
+    background-color: var(--light);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.header-logo {
+    max-height: 60px;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+}
+
+.contact-info span {
+    margin: 0 10px;
+}
+
+.divider {
+    color: var(--gray);
+}
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    color: var(--primary);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--primary);
+    padding: 15px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--accent-light);
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero1.jfif') no-repeat center center;
+    background-size: cover;
+    color: var(--light);
+    padding: 120px 0;
+    text-align: left;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--light);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== FOUNDER SECTION ===== */
+.founder-section {
+    background-color: var(--light);
+}
+
+.founder-image-container {
+    border: 5px solid var(--primary);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 400px; /* Adjust this value as needed */
+    width: 100%; /* Ensure it scales responsively */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-image-container img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.founder-content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.read-more-btn {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.read-more-btn:hover {
+    color: var(--primary-dark);
+}
+
+.read-more-btn i {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+/* ===== MISSION & VISION SECTION ===== */
+.mission-vision-section {
+    background-color: var(--light-gray);
+}
+
+.mission-vision-image img {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision-content {
+    padding: 20px;
+}
+
+.mission-box, .vision-box {
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-box h3, .vision-box h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.mission-box i, .vision-box i {
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== NEWS & FEEDS SECTION ===== */
+.news-feeds-section {
+    background-color: var(--light);
+}
+
+.news-card {
+    background-color: var(--light);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+.read-more {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more i {
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+/* ===== DONATION SECTION ===== */
+.donation-section {
+    background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.9)), url('donation-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--light);
+    padding: 80px 0;
+}
+
+.donation-section .section-title h2,
+.donation-section p {
+    color: var(--light);
+}
+
+.donation-form-container {
+    background-color: var(--light);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.donation-form {
+    color: var(--dark);
+}
+
+.donation-amount-options {
+    margin-bottom: 15px;
+}
+
+/* ===== GET IN TOUCH SECTION ===== */
+.get-in-touch-section {
+    background-color: var(--light-gray);
+}
+
+.contact-card {
+    background-color: var(--light);
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--primary-dark);
+    color: var(--light);
+    padding: 60px 0 30px;
+}
+
+.footer-logo {
+    max-height: 60px;
+}
+
+.footer h4 {
+    color: var(--light);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--light);
+    opacity: 0.9;
+}
+
+.footer-links a:hover {
+    color: var(--accent-light);
+    opacity: 1;
+}
+
+.footer .social-icons .social-icon {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light);
+}
+
+.footer .social-icons .social-icon:hover {
+    background-color: var(--accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .navbar-collapse {
+        background-color: var(--primary);
+        padding: 15px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .founder-image-container {
+        margin-bottom: 30px;
+    }
+    
+    .mission-vision-image {
+        margin-bottom: 30px;
+    }
+    
+    .contact-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--secondary) !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+.bg-dark {
+    background-color: var(--dark) !important;
+}
