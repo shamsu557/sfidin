@@ -321,3 +321,53 @@ function initAnimations() {
     
     // Add more animations as needed
 }
+    $(document).ready(function () {
+        $("#verifyAdmin").click(function () {
+            const username = $("#adminUsername").val();
+            const password = $("#adminPassword").val();
+    
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return;
+            }
+    
+            $.ajax({
+                url: "/verify-admin",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ username, password }),
+                success: function (response) {
+                    if (response.success) {
+                        $("#adminLoginContainer").hide();
+                        $("#signupContainer").show();
+                    } else {
+                        alert(response.message || "Invalid credentials. Access denied.");
+                    }
+                },
+                error: function () {
+                    alert("An error occurred while verifying credentials.");
+                }
+            });
+        });
+    
+        $("#signupForm").submit(function (event) {
+            event.preventDefault();
+    
+            const formData = $(this).serialize();
+    
+            $.ajax({
+                url: "/admin-signup",
+                method: "POST",
+                data: formData,
+                success: function (response) {
+                    alert(response.success ? "Admin Creation successful!" : "An error occurred.");
+                    if (response.success) {
+                        window.location.href = "admin_login.html"; // Redirect to admin login page
+                    }
+                },
+                error: function () {
+                    alert("An unexpected error occurred. Please try again.");
+                }
+            });
+        });
+    });

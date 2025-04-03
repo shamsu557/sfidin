@@ -512,3 +512,6 @@ a:hover {
 .bg-dark {
     background-color: var(--dark) !important;
 }
+.alert {
+    display: none;
+  }

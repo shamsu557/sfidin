@@ -1,0 +1,278 @@
+/* 
+   SFIDIN - Sarauniya Fanna Initiative for Development in Nigeria
+   Admin Stylesheet
+*/
+
+/* Admin-specific variables */
+:root {
+    --admin-primary: #2E7D32;
+    --admin-secondary: #1565C0;
+    --admin-accent: #FF8F00;
+    --admin-light: #F5F5F5;
+    --admin-dark: #212121;
+    --admin-gray: #757575;
+    --admin-light-gray: #EEEEEE;
+    --admin-success: #4CAF50;
+    --admin-warning: #FFC107;
+    --admin-danger: #F44336;
+    --admin-info: #2196F3;
+}
+
+/* Admin Body Styles */
+.admin-body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Admin Header Styles */
+.admin-header .navbar {
+    background-color: var(--admin-primary);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.admin-header .navbar-brand img {
+    margin-right: 10px;
+}
+
+.admin-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.admin-nav .nav-link:hover,
+.admin-nav .nav-link.active {
+    color: var(--admin-accent) !important;
+}
+
+/* Login Section Styles */
+#loginSection {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+#loginSection .card {
+    border: none;
+    border-radius: 10px;
+}
+
+#loginSection .card-title {
+    color: var(--admin-primary);
+}
+
+#loginSection .input-group-text {
+    background-color: var(--admin-light);
+    border-right: none;
+}
+
+#loginSection .form-control {
+    border-left: none;
+}
+
+#loginSection .form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/* Dashboard Styles */
+.dashboard-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-icon {
+    font-size: 2.5rem;
+    color: var(--admin-primary);
+    opacity: 0.7;
+}
+
+/* Table Styles */
+.table th {
+    font-weight: 600;
+    color: var(--admin-dark);
+    background-color: var(--admin-light-gray);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(46, 125, 50, 0.05);
+}
+
+/* Status Badges */
+.badge-success {
+    background-color: var(--admin-success);
+    color: white;
+}
+
+.badge-warning {
+    background-color: var(--admin-warning);
+    color: var(--admin-dark);
+}
+
+.badge-danger {
+    background-color: var(--admin-danger);
+    color: white;
+}
+
+.badge-info {
+    background-color: var(--admin-info);
+    color: white;
+}
+
+/* Action Buttons */
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.action-btn-view {
+    background-color: var(--admin-info);
+}
+
+.action-btn-edit {
+    background-color: var(--admin-warning);
+}
+
+.action-btn-delete {
+    background-color: var(--admin-danger);
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal-header {
+    background-color: var(--admin-primary);
+    color: white;
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    color: white;
+    opacity: 1;
+}
+
+/* Admin Footer */
+.admin-footer {
+    background-color: var(--admin-dark);
+    color: white;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+.admin-footer p {
+    margin-bottom: 0;
+    opacity: 0.7;
+}
+
+/* Pagination */
+.pagination .page-item.active .page-link {
+    background-color: var(--admin-primary);
+    border-color: var(--admin-primary);
+}
+
+.pagination .page-link {
+    color: var(--admin-primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+    .dashboard-card {
+        margin-bottom: 15px;
+    }
+    
+    .action-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation for alerts */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert {
+    animation: fadeInDown 0.5s ease;
+}
+
+/* Session timeout warning */
+.session-timeout-warning {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050;
+    min-width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PDF Export Preview */
+.pdf-preview {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pdf-footer {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.signature-line {
+    border-top: 1px solid #000;
+    width: 200px;
+    margin-top: 50px;
+    display: inline-block;
+}
