@@ -371,3 +371,20 @@ function initAnimations() {
             });
         });
     });
+
+    const founderImages = ["sarauniyaa.jpg", "sarauniya2.jpg", "saruniya3.jpg"];
+let currentFounderIndex = 0;
+const founderImageElement = document.getElementById("founder-image");
+
+function changeFounderImage() {
+    currentFounderIndex = (currentFounderIndex + 1) % founderImages.length;
+    founderImageElement.style.opacity = "0"; // Fade out
+
+    setTimeout(() => {
+        founderImageElement.src = founderImages[currentFounderIndex]; // Change image
+        founderImageElement.style.opacity = "1"; // Fade in
+    }, 500);
+}
+
+// Change slide every 5 seconds
+setInterval(changeFounderImage, 5000);

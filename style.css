@@ -515,3 +515,46 @@ a:hover {
 .alert {
     display: none;
   }
+  .ceo-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    height: 400px; /* Ensure uniform height */
+    overflow: hidden;
+}
+
+.ceo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.founder-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.founder-titles {
+    font-size: 1rem;
+    margin: 5px 0 0;
+}
