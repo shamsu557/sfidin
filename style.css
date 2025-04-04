@@ -157,7 +157,7 @@ a:hover {
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero1.jfif') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero.png') no-repeat center center;
     background-size: cover;
     color: var(--light);
     padding: 120px 0;
@@ -525,7 +525,7 @@ a:hover {
     display: inline-block;
     width: 100%;
     max-width: 400px; /* Adjust as needed */
-    height: 400px; /* Ensure uniform height */
+    height: 500px; /* Ensure uniform height */
     overflow: hidden;
 }
 
@@ -534,7 +534,7 @@ a:hover {
     height: 100%;
     object-fit: cover; /* Ensures the image fills the container without distortion */
     border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
 }
 
 .image-caption {
