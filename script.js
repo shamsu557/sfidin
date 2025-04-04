@@ -233,7 +233,7 @@ function initPaystackIntegration() {
         
         // Initialize Paystack payment
         const handler = PaystackPop.setup({
-            key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Replace with your Paystack public key
+            key: 'pk_live_e6942e61f70c87019cbeb64ffed04e10fbd2ee10', // Replace with your public key
             email: email,
             amount: amount,
             currency: 'NGN',
@@ -281,24 +281,112 @@ function initPaystackIntegration() {
  * @param {Object} response - Paystack response object
  */
 function showPaymentSuccess(response) {
-    const donationForm = document.getElementById('donationForm');
-    const successMessage = document.createElement('div');
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const country = document.getElementById('country').value;
+    const message = document.getElementById('message').value;
+    let state = "N/A"; // You can update this if you have a state field.
     
-    successMessage.className = 'alert alert-success mt-3';
-    successMessage.innerHTML = `
-        <h4 class="alert-heading">Thank You for Your Donation!</h4>
-        <p>Your donation has been processed successfully. Reference: ${response.reference}</p>
-        <p>A receipt has been sent to your email address.</p>
-        <p class="mb-0">Your generosity will help us make a difference in the lives of those we serve.</p>
-    `;
-    
-    // Replace form with success message
-    donationForm.innerHTML = '';
-    donationForm.appendChild(successMessage);
-    
-    // Scroll to success message
-    successMessage.scrollIntoView({ behavior: 'smooth' });
-}
+    // Get selected amount
+    let amount = 0;
+    const customAmountInput = document.getElementById('customAmount');
+    const donationRadios = document.querySelectorAll('input[name="donationAmount"]');
+
+    donationRadios.forEach(radio => {
+        if (radio.checked) {
+            if (radio.id === 'amountCustom') {
+                amount = parseFloat(customAmountInput.value);
+            } else {
+                amount = parseFloat(radio.value);
+            }
+        }
+    });
+
+    // Send to backend
+    fetch("/donate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            donorName: fullName,
+            donorEmail: email,
+            donorPhone: phone,
+            amount: amount,
+            country: country,
+            state: state,
+            reference: response.reference
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        const donationForm = document.getElementById('donationForm');
+        const successMessage = document.createElement('div');
+
+        successMessage.className = 'alert alert-success mt-3';
+        successMessage.innerHTML = `
+            <h4 class="alert-heading">Thank You for Your Donation!</h4>
+            <p>${data.message}</p>
+            <p>Reference: ${response.reference}</p>
+            <p class="mb-0">Your generosity will help us make a difference in the lives of those we serve.</p>
+        `;
+
+        donationForm.innerHTML = '';
+        donationForm.appendChild(successMessage);
+        successMessage.scrollIntoView({ behavior: 'smooth' });
+    })
+    .catch(err => {
+        console.error("Error sending donation to backend:", err);
+        alert("Donation was successful but failed to store details. Please contact us.");
+    });
+    //contact form
+}document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+
+    // Handle form submission
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Extract form data
+        const formData = {
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            message: document.getElementById("message").value.trim(),
+        };
+
+        // Validate form fields
+        if (!formData.name || !formData.email || !formData.message) {
+            alert("Please fill out all fields before submitting the form.");
+            return;
+        }
+
+        try {
+            // Submit form data to the server using Fetch API
+            const response = await fetch("/send-message", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Process response
+            const result = await response.json();
+            if (response.ok) {
+                alert(result.message || "Your message has been sent successfully!");
+                contactForm.reset(); // Clear the form
+            } else {
+                alert(result.error || "Failed to send your message. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error submitting the form:", error);
+            alert("An error occurred while sending your message. Please try again later.");
+        }
+    });
+});
+
+
 
 /**
  * Initialize animations for various elements
@@ -388,3 +476,9 @@ function changeFounderImage() {
 
 // Change slide every 5 seconds
 setInterval(changeFounderImage, 5000);
+document.getElementById('toggle-news-btn').addEventListener('click', function () {
+    const extraNews = document.querySelectorAll('.extra-news');
+    const isHidden = extraNews[0].classList.contains('d-none');
+    extraNews.forEach(item => item.classList.toggle('d-none'));
+    this.textContent = isHidden ? 'View Less' : 'View All News';
+});
