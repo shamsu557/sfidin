@@ -595,3 +595,225 @@ a:hover {
     #myBtn:hover {
     background-color: #198b78;
     }
+   /* ========== Medium Devices (Tablets, 768px - 991px) ========== */
+@media (max-width: 991.98px) {
+    /* Layout Adjustments */
+    .container, .container-fluid {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+  
+    .section-title p {
+      font-size: 1rem;
+    }
+  
+    /* Image Scaling */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .founder-image-container img,
+    .service-image img,
+    .volunteer-image img,
+    .news-card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    /* Founder Section */
+    .founder-section {
+      text-align: center;
+    }
+  
+    .founder-image-container {
+      margin-bottom: 20px;
+    }
+  
+    /* Grid / Cards */
+    .card, .news-card {
+      margin-bottom: 30px;
+    }
+  
+    .service-box {
+      margin-bottom: 30px;
+    }
+  
+    .donation-form-container {
+      padding: 25px;
+    }
+  
+    .footer {
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* ========== Small Devices (Phones < 768px) ========== */
+  @media (max-width: 767.98px) {
+    /* Typography */
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+  
+    h3, h4 {
+      font-size: 1.2rem;
+    }
+  
+    p, .section-title p, .read-more {
+      font-size: 0.95rem;
+    }
+  
+    /* Navbar */
+    .navbar-collapse {
+      background-color: transparent !important; /* same as desktop */
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    /* Buttons */
+    .btn {
+      width: auto !important;
+      margin-top: 0 !important;
+      display: inline-block;
+    }
+  
+    /* Sections */
+    .hero-section, .donation-section, .mission-vision-content {
+      padding: 60px 15px;
+      text-align: center;
+    }
+  
+    .volunteer-section {
+      padding: 40px 15px;
+    }
+  
+    .image-caption {
+      font-size: 0.85rem;
+    }
+  
+    /* Image Handling */
+    img, .responsive-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .service-image img,
+    .news-card img {
+      height: 180px;
+    }
+  
+    /* Cards and Columns */
+    .card, .news-card, .service-box {
+      margin-bottom: 20px;
+    }
+  
+    .founder-name {
+      font-size: 1.2rem;
+    }
+  
+    .founder-titles {
+      font-size: 0.9rem;
+    }
+  
+    /* Footer */
+    .footer {
+      padding: 30px 15px;
+      font-size: 0.9rem;
+    }
+  
+    .footer h4 {
+      font-size: 1rem;
+    }
+  
+    .footer .social-icon {
+      width: 28px;
+      height: 28px;
+    }
+  
+    /* Navbar Logo */
+    .navbar-brand img {
+      width: auto !important;
+      max-height: 50px;
+      object-fit: contain;
+    }
+  }
+  
+  /* ========== Extra Small Devices (Phones < 576px) ========== */
+  @media (max-width: 575.98px) {
+    .hero-section h1 {
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
+  
+    .hero-section p {
+      font-size: 0.9rem;
+    }
+  
+    .section-title h2 {
+      font-size: 1.4rem;
+    }
+  
+    .volunteer-image img {
+      max-height: 220px;
+    }
+  
+    .news-content h3 {
+      font-size: 1rem;
+    }
+  
+    .donation-section {
+      padding: 40px 10px;
+    }
+  
+    .donation-form-container {
+      padding: 15px;
+    }
+  
+    .mission-box, .vision-box {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  
+    #myBtn {
+      font-size: 12px;
+      padding: 10px;
+      right: 10px;
+      bottom: 10px;
+    }
+  
+    /* Stack columns vertically */
+    .col-md-6, .col-md-4, .col-sm-6 {
+      width: 100%;
+    }
+  }
+  
+  /* FOOTER LOGO: Adjust size so it's not huge */
+  footer img,
+  .footer-logo img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  
