@@ -79,44 +79,36 @@ const transporter = nodemailer.createTransport({
     pass: "Sekure@2025", // Actual email password
   },
 });
-
-// Contact form submission route
+//contact form submission
 app.post("/send-message", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, contactEmail, subject, message } = req.body;
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: "All fields are required." });
+  if (!name || !contactEmail || !subject || !message) {  // Check for subject
+      return res.status(400).json({ error: "All fields are required." });
   }
 
   const mailOptions = {
-    from: `"${name}" <${email}>`,
-    to: "info@sekurefoundation.org.ng",
-    subject: `Message from ${name}`,
-    text: `You have a new message from your website contact form:
+      from: `"${name}" <${contactEmail}>`,
+      to: "info@sekurefoundation.org.ng",
+      subject: `Message from ${name} - ${subject}`,  // Include subject
+      text: `You have a new message from your website contact form:
 
 Name: ${name}
-Email: ${email}
+Email: ${contactEmail}
+Subject: ${subject}  // Include subject
 Message: ${message}`,
   };
 
   try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent: " + info.response);
-    return res.status(200).json({ message: "Your message has been sent successfully!" });
+      const info = await transporter.sendMail(mailOptions);
+      console.log("Email sent: " + info.response);
+      return res.status(200).json({ message: "Your message has been sent successfully!" });
   } catch (error) {
-    console.error("Error sending email:", error);
-    return res.status(500).json({ error: "Failed to send your message. Please try again later." });
+      console.error("Error sending email:", error);
+      return res.status(500).json({ error: "Failed to send your message. Please try again later." });
   }
 });
 
-// Verify SMTP connection
-transporter.verify((error, success) => {
-  if (error) {
-    console.error("SMTP connection error:", error);
-  } else {
-    console.log("SMTP is ready to send emails.");
-  }
-});
 // Donation route
 app.post("/donate", (req, res) => {
   const { donorName, donorEmail, donorPhone, amount, country, state, reference } = req.body;

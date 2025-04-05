@@ -128,7 +128,7 @@ function validateDonationForm() {
     }
     
     // Validate email
-    if (!email.value.trim() || !isValidEmail(email.value)) {
+    if (email && email.value.trim() && !isValidEmail(email.value)) {
         highlightInvalidField(email, 'Please enter a valid email address');
         isValid = false;
     } else {
@@ -211,8 +211,8 @@ function initPaystackIntegration() {
     // This function will be called when the donate button is clicked
     window.processPayment = function() {
         const fullName = document.getElementById('fullName').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
+        let email = document.getElementById('email').value.trim() || "info@sfidin.org.ng"; // Default email
+        let phone = document.getElementById('phone').value.trim() || "08030909793"; // Default phone number
         const country = document.getElementById('country').value;
         const message = document.getElementById('message').value;
         
@@ -340,8 +340,10 @@ function showPaymentSuccess(response) {
         console.error("Error sending donation to backend:", err);
         alert("Donation was successful but failed to store details. Please contact us.");
     });
+}
+
     //contact form
-}document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const contactForm = document.getElementById("contactForm");
 
     // Handle form submission
@@ -351,12 +353,13 @@ function showPaymentSuccess(response) {
         // Extract form data
         const formData = {
             name: document.getElementById("name").value.trim(),
-            email: document.getElementById("email").value.trim(),
+            contactEmail: document.getElementById("contactEmail").value.trim(),
+            subject: document.getElementById("subject").value.trim(), // Added subject
             message: document.getElementById("message").value.trim(),
         };
 
         // Validate form fields
-        if (!formData.name || !formData.email || !formData.message) {
+        if (!formData.name || !formData.contactEmail || !formData.message) {
             alert("Please fill out all fields before submitting the form.");
             return;
         }
