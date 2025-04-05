@@ -493,3 +493,19 @@ function toggleMap() {
         map.style.display = "none";  // Hide the map
     }
 }
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+// Back to top button functionality
+window.onscroll = function () {
+    scrollFunction();
+};
