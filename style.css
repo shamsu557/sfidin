@@ -564,3 +564,9 @@ a:hover {
     object-fit: cover; /* or "contain" depending on desired look */
     object-position: top center;
 }
+.volunteer-image img {
+    max-height: 400px;
+    width: 100%;
+    object-position: top;
+    border-radius: 8px;
+}
