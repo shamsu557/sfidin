@@ -97,9 +97,9 @@
                         <div class="image-wrapper">
                             <img id="founder-image" src="sarauniyaa.jpg" alt="Founder Image" class="ceo-image">
                             <div class="image-caption text-center">
-                                <h3 class="founder-name text-warning">Hajiya Fanna Muhammad Kawu</h3>
+                                <h3 class="founder-name text-warning">Sarauniya Hajiya TMP Chief Fanna Muhammad Kawu <br>(Hafizahallahu Wa Ra'aha)</h3>
                                 <p class="founder-titles text-light">
-                                    Founder & President, SFIDIN, Humanitarian & Community Developer, Women's Empowerment Advocate
+                                    Founder & President, SFIDIN, Humanitarian & Community Developer and Women's Empowerment Advocate
                                 </p>
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
                 <div class="founder-content">
-                    <p>Sarauniya Hajiya TMP Chief Fanna Muhammad Kawu, a visionary leader with a passion for community development and social welfare, established the Sarauniya Fanna Initiative for Development in Nigeria (SFIDIN) with a mission to transform lives and communities across Nigeria.</p>
+                    <p>Sarauniya Hajiya TMP Chief Fanna Muhammad Kawu (Hafizahallahu Wa Ra'aha), a visionary leader with a passion for community development and social welfare, established the Sarauniya Fanna Initiative for Development in Nigeria (SFIDIN) with a mission to transform lives and communities across Nigeria.</p>
                     <div class="collapse text-center" id="founderDetails">
                         <p>Hajiya Fanna Muhammad Kawu was born and raised in Maiduguri, descending from the Prophet's progeny (Sharifai). She holds several distinguished titles, including:</p>
                         <ul class="text-start">
@@ -343,55 +343,72 @@
             </div>
         </div>
     </section>
-
-    <!-- Get In Touch Section -->
-    <section class="get-in-touch-section py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <div class="section-title">
-                        <h2>Get In Touch</h2>
-                        <div class="title-underline mx-auto"></div>
-                    </div>
-                    <p class="lead">We'd love to hear from you. Reach out to us with any questions or inquiries.</p>
+<!-- Get In Touch Section -->
+<section class="get-in-touch-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <div class="title-underline mx-auto"></div>
                 </div>
+                <p class="lead">We'd love to hear from you. Reach out to us with any questions or inquiries.</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
+        </div>
+        <div class="row justify-content-center">
+            <!-- Location -->
+            <div class="col-md-4 mb-4">
+                <div class="contact-card text-center">
+                    <div class="contact-icon">
+                        <a href="javascript:void(0)" onclick="toggleMap()">
                             <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Our Location</h3>
-                        <p>123 Development Road<br>Abuja, Nigeria</p>
+                        </a>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h3>Phone Number</h3>
-                        <p>+234 123 456 7890<br>+234 987 654 3210</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="contact-card text-center">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email Address</h3>
-                        <p>info@sfidin.org<br>support@sfidin.org</p>
-                    </div>
+                    <h3>Our Location</h3>
+                    <p>123 Development Road<br>Abuja, Nigeria</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 text-center mt-3">
-                    <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+
+            <!-- Phone Number -->
+            <div class="col-md-4 mb-4">
+                <div class="contact-card text-center">
+                    <div class="contact-icon">
+                        <a href="tel:+2341234567890">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p>+234 123 456 7890<br>+234 987 654 3210</p>
+                </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="col-md-4 mb-4">
+                <div class="contact-card text-center">
+                    <div class="contact-icon">
+                        <a href="mailto:info@sfidin.org">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <h3>Email Address</h3>
+                    <p>info@sfidin.org<br>support@sfidin.org</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- Google Map (Initially Hidden) -->
+        <div id="googleMap" style="display:none; width:100%; height:450px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252166.91434977376!2d7.249626071875001!3d9.0765715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e745f4cd62fd9%3A0x53bd17b4a20ea12b!2sAbuja%2C%20Federal%20Capital%20Territory%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1648651234567!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Contact Us Button -->
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer">

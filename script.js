@@ -485,3 +485,11 @@ document.getElementById('toggle-news-btn').addEventListener('click', function ()
     extraNews.forEach(item => item.classList.toggle('d-none'));
     this.textContent = isHidden ? 'View Less' : 'View All News';
 });
+function toggleMap() {
+    const map = document.getElementById("googleMap");
+    if (map.style.display === "none") {
+        map.style.display = "block";  // Show the map
+    } else {
+        map.style.display = "none";  // Hide the map
+    }
+}
