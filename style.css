@@ -820,24 +820,24 @@ a:hover {
   /* Tablets (≥768px and <992px) */
   @media (max-width: 991.98px) {
     img[alt="SFIDIN Logo"] {
-      height: 70px;
-      width: 70px;
+      height: 50px;
+      width: 50px;
     }
   }
   
   /* Small devices (phones ≥576px and <768px) */
   @media (max-width: 767.98px) {
     img[alt="SFIDIN Logo"] {
-      height: 60px;
-      width: 60px;
+      height: 45px;
+      width: 45px;
     }
   }
   
   /* Extra small devices (phones <576px) */
   @media (max-width: 575.98px) {
     img[alt="SFIDIN Logo"] {
-      height: 50px;
-      width: 50px;
+      height: 40px;
+      width: 40px;
     }
   }
   
